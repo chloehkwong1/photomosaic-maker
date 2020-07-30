@@ -8,7 +8,7 @@ def resize():
     '''
     change path as necessary to resize different set of pictures
     '''
-    path = "C:/Users/chloe/Desktop/Python_Stuffs/photomosaic//image_sets/flower_images"
+    path = "C:/Users/PATH TO YOUR FOLDER CONTAINING IMAGE SET
     dirs = os.listdir(path)
     new_path = Path(path, 'resized_pics')
     new_path.mkdir(parents=True, exist_ok=True)
