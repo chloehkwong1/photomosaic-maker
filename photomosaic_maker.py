@@ -7,11 +7,11 @@ from natsort import natsorted
 '''Change these variables if necessary!'''
 #rough best percentages for each image dataset(but further experimentation can be beneficial)
 dom_factor_dict = {
-    "landscape_images" : 0.7,
-    "pokemon_images" : 0.5
+    "FOLDER NAME CONTAINING YOUR IMAGE SET" : 0.7,
+    "CAN STORE MULTIPLE DATASETS HERE SO YOU CAN KEEP TRACK OF THE DOMINANT FACTOR PERCENTAGE" : 0.5
 }
-im_name = "bailey2.jpeg"
-image_dataset = "landscape_images"
+im_name = "YOUR ORIGINAL PIC.jpeg"
+image_dataset = "FOLDER NAME CONTAINING YOUR IMAGE SET"
 
 start_im = Image.open(im_name)
 
@@ -33,7 +33,7 @@ def rgb_pixel(im_final):
 
 def rgb_avg_pics():
     #change path ending depending on which small pictures are wanted
-    new_path = Path("C:/Users/chloe/Desktop/Python_Stuffs/photomosaic/image_sets", image_dataset, 'resized_pics')
+    new_path = Path("PATH TO FOLDER WHERE YOUR IMAGE SET IS", 'resized_pics')
     try:
         new_dir = os.listdir(new_path)
         colour_dict = {}
@@ -69,7 +69,7 @@ def match_pics_and_pixels(rgb_im_avg, colour_dict):
     return match_pixel_img
         
 def concat_rows(match_pixel_img, new_path):
-        path = "C:/Users/chloe/Desktop/Python_Stuffs/photomosaic"
+        path = "PATH TO WHERE YOU WANT TO STORE YOUR NEW PHOTOMOSAIC FOLDER"
         counter_1 = 1
         while True:
             try:
